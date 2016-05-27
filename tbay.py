@@ -68,6 +68,6 @@ print(session.query(Item.id, Item.name, Item.user_id).all())
 print(session.query(Bid.price, Bid.bidder_id).first())
 
 #gives the highest bid and the user id # associated with the bid
-print(max(session.query(Bid.price).all()))
+print(max(session.query(Bid.price, Bid.bidder_id).all()))
     
     
